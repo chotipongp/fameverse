@@ -1,19 +1,19 @@
 ---
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Header from "../../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
@@ -83,13 +83,56 @@ const posts = (await getCollection('blog')).sort(
         ul li:first-child .title {
           font-size: 1.563em;
         }
+        .coming-soon {
+          min-height: 80vh;
+          display: grid;
+          place-items: center;
+          text-align: center;
+        }
+
+        .content {
+          max-width: 520px;
+          padding: 2rem;
+        }
+
+        .badge {
+          display: inline-block;
+          font-size: 0.75rem;
+          letter-spacing: 0.15em;
+          color: #6b7280;
+          margin-bottom: 1rem;
+        }
+
+        h1 {
+          font-size: clamp(2.2rem, 4vw, 3rem);
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .content p {
+          font-size: 1rem;
+          line-height: 1.7;
+          color: #6b7280;
+        }
+
+        .divider {
+          width: 40px;
+          height: 2px;
+          background: #e5e7eb;
+          margin: 2rem auto;
+        }
+
+        .hint {
+          font-size: 0.9rem;
+          color: #9ca3af;
+        }
       }
     </style>
   </head>
   <body>
     <Header />
     <main>
-      <section>
+      <!-- <section>
         <ul>
           {
             posts.map((post) => (
@@ -112,6 +155,15 @@ const posts = (await getCollection('blog')).sort(
             ))
           }
         </ul>
+      </section> -->
+      <section class="coming-soon">
+        <div class="content">
+          <h1>Coming in 2026</h1>
+
+          <div class="divider"></div>
+
+          <p class="hint">Stay tuned.</p>
+        </div>
       </section>
     </main>
     <Footer />
