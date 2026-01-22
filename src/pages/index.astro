@@ -41,7 +41,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Exxon_Mobil_Logo.svg/1280px-Exxon_Mobil_Logo.svg.png"
               alt="ExxonMobil"
-              width="40"
+              class="company-logo"
             />
             <div>
               <span class="company-meta">Full-time · 6 yrs 7 mos</span>
@@ -93,6 +93,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Tencent_Logo.svg/1280px-Tencent_Logo.svg.png"
               alt="Tencent"
               title="Tencent"
+              class="company-logo"
             />
             <div>
               <span class="company-meta">Internship · 2 mos</span>
@@ -289,10 +290,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
           </div>
 
           <div>
-            <h4>Cloud & DevOps</h4>
+            <h4>Cloud & DevSecOps</h4>
             <ul>
               <li>Azure</li>
-              <li>Kubernetes (AKS)</li>
+              <li>Kubernetes</li>
               <li>Terraform, Helm, Docker</li>
             </ul>
           </div>
@@ -450,14 +451,16 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     gap: 1rem;
   }
 
-  .company-header img {
-    width: 40px;
-    height: 40px;
-  }
-
   .company-meta {
     font-size: 0.85rem;
     color: #6b7280;
+  }
+
+  .company-logo {
+    height: 32px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
   }
 
   .timeline {
