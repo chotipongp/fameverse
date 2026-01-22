@@ -13,9 +13,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
   <body>
     <Header />
     <main>
-      <h1 class="hero-title">Welcome to the FameVerse! 🚀</h1>
-      <p class="hero-subtitle">
-        System Architect · Music · Sport · Photography
+      <h1 class="hero-title">Welcome to the FameVerse!</h1>
+      <p class="subtitle">
+        💻 System Architect · 🎵 Music · 🏓 Table Tennis · 📸 Photography
       </p>
       <section class="intro">
         <p class="eyebrow">About Me</p>
@@ -32,57 +32,87 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
           before they happen while drastically reducing operational overhead.
         </p>
       </section>
-      <section class="specialties">
-        <div class="card">
-          <h3>Architecture</h3>
-          <p>
-            Designing scalable microservices and event-driven systems with a
-            strong focus on reliability and long-term maintainability.
-          </p>
-          <span>Microservices · Event-Driven · Kafka</span>
-        </div>
+      <section class="experience">
+        <h2>Experience</h2>
 
-        <div class="card">
-          <h3>Reliability & Automation</h3>
-          <p>
-            Shifting systems from reactive monitoring to proactive failure
-            prevention using synthetic testing and automation.
-          </p>
-          <span>Synthetic Testing · Observability</span>
-        </div>
-
-        <div class="card">
-          <h3>Platform Engineering</h3>
-          <p>
-            Building cloud-native platforms that reduce operational overhead and
-            scale globally with confidence.
-          </p>
-          <span>Azure · Kubernetes · Terraform</span>
-        </div>
-      </section>
-      <section class="skills">
-        <h2>Core Competencies</h2>
-
-        <div class="grid">
-          <div>
-            <h4>Architecture</h4>
-            <ul>
-              <li>Microservices</li>
-              <li>Event-Driven Architecture (Kafka)</li>
-              <li>Synthetic Testing</li>
-            </ul>
+        <!-- Company -->
+        <div class="company">
+          <div class="company-header">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Exxon_Mobil_Logo.svg/1280px-Exxon_Mobil_Logo.svg.png"
+              alt="ExxonMobil"
+              width="40"
+            />
+            <div>
+              <span class="company-meta">Full-time · 6 yrs 7 mos</span>
+            </div>
           </div>
 
-          <div>
-            <h4>Cloud & DevOps</h4>
-            <ul>
-              <li>Azure</li>
-              <li>Kubernetes (AKS)</li>
-              <li>Terraform, Helm, Docker</li>
-            </ul>
+          <div class="timeline">
+            <!-- Role -->
+            <div class="role">
+              <div class="marker">
+                <span class="dot"></span>
+                <span class="line"></span>
+              </div>
+
+              <div class="content">
+                <h4>System Architect</h4>
+              </div>
+            </div>
+
+            <!-- Role -->
+            <div class="role">
+              <div class="marker">
+                <span class="dot"></span>
+                <span class="line"></span>
+              </div>
+
+              <div class="content">
+                <h4>Lead Developer</h4>
+              </div>
+            </div>
+
+            <!-- Role -->
+            <div class="role">
+              <div class="marker">
+                <span class="dot"></span>
+              </div>
+
+              <div class="content">
+                <h4>Software Engineer</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="company">
+          <div class="company-header">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Tencent_Logo.svg/1280px-Tencent_Logo.svg.png"
+              alt="Tencent"
+              title="Tencent"
+            />
+            <div>
+              <span class="company-meta">Internship · 2 mos</span>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="role">
+              <div class="marker">
+                <span class="dot"></span>
+              </div>
+
+              <div class="content">
+                <h4>Software Developer Intern</h4>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <section class="tech-stack">
         <h2>Tech Stacks</h2>
 
@@ -217,6 +247,57 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
           </div>
         </div>
       </section>
+      <section class="specialties">
+        <div class="card">
+          <h3>Architecture</h3>
+          <p>
+            Designing scalable microservices and event-driven systems with a
+            strong focus on reliability and long-term maintainability.
+          </p>
+          <span>Microservices · Event-Driven · Kafka</span>
+        </div>
+
+        <div class="card">
+          <h3>Reliability & Automation</h3>
+          <p>
+            Shifting systems from reactive monitoring to proactive failure
+            prevention using synthetic testing and automation.
+          </p>
+          <span>Synthetic Testing · Observability</span>
+        </div>
+
+        <div class="card">
+          <h3>Platform Engineering</h3>
+          <p>
+            Building cloud-native platforms that reduce operational overhead and
+            scale globally with confidence.
+          </p>
+          <span>Azure · Kubernetes · Terraform</span>
+        </div>
+      </section>
+      <section class="skills">
+        <h2>Skills</h2>
+
+        <div class="grid">
+          <div>
+            <h4>Architecture</h4>
+            <ul>
+              <li>Microservices</li>
+              <li>Event-Driven Architecture (Kafka)</li>
+              <li>Synthetic Testing</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Cloud & DevOps</h4>
+            <ul>
+              <li>Azure</li>
+              <li>Kubernetes (AKS)</li>
+              <li>Terraform, Helm, Docker</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
     <Footer />
   </body>
@@ -300,10 +381,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     letter-spacing: -0.03em;
   }
 
-  .hero-subtitle {
-    margin-top: 0.5rem;
-    font-size: 1.8rem;
-    color: #9ca3af;
+  .subtitle {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    opacity: 0.7;
   }
 
   .tech-stack {
@@ -353,5 +434,92 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     .logos img {
       filter: invert(1);
     }
+  }
+  .experience {
+    max-width: 900px;
+    margin: 5rem auto;
+  }
+
+  .company {
+    margin-bottom: 4rem;
+  }
+
+  .company-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .company-header img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .company-meta {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
+  .timeline {
+    margin-top: 2rem;
+  }
+
+  .role {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    background: #2563eb;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .line {
+    position: absolute;
+    top: 18px;
+    bottom: -28px;
+    width: 2px;
+    background: #e5e7eb;
+  }
+
+  .role:last-child .line {
+    display: none;
+  }
+
+  .content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0.2rem 0 0.8rem;
+  }
+
+  .content ul {
+    padding-left: 1.2rem;
+  }
+
+  .content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .company-header img {
+    width: 10rem;
+    height: auto;
+    object-fit: contain;
   }
 </style>
